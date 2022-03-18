@@ -1,0 +1,24 @@
+gnag {
+    enabled true
+    failOnError true
+
+    ktlint {
+        setEnabled true
+        toolVersion '0.43.2'
+    }
+    androidLint {
+        setEnabled true
+        severity 'Warning'
+    }
+    detekt {
+        setEnabled true
+        reporterConfig project.file("$rootDir/analysis/detekt.yml")
+        toolVersion "1.19.0"
+    }
+    github {
+        rootUrl "https://api.github.com/repos/"
+        repoName 'android-app-template'
+        authToken System.getenv("GITHUB_TOKEN")
+        issueNumber System.getenv("PULL_REQUEST_NUMBER")
+    }
+}
