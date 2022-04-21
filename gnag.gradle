@@ -1,3 +1,6 @@
+apply plugin: 'org.jlleitschuh.gradle.ktlint'
+apply plugin: 'com.btkelly.gnag'
+
 gnag {
     enabled true
     failOnError true
@@ -12,13 +15,13 @@ gnag {
     }
     detekt {
         setEnabled true
-        reporterConfig project.file("$rootDir/analysis/detekt.yml")
+        reporterConfig project.file("$rootDir/detekt/detekt.yml")
         toolVersion "1.19.0"
     }
     github {
         rootUrl "https://api.github.com/repos/"
-        repoName 'android-app-template'
+        repoName 'FrontFin/Front.Mobile.Android'
         authToken System.getenv("GITHUB_TOKEN")
-        issueNumber System.getenv("PULL_REQUEST_NUMBER")
+        issueNumber System.getenv("BITRISE_PULL_REQUEST")
     }
 }

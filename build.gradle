@@ -15,12 +15,7 @@ plugins {
     id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
     id 'org.jlleitschuh.gradle.ktlint' version '10.2.0' apply false
     id 'com.btkelly.gnag' version '3.0.2' apply false
-}
-
-subprojects {
-    apply plugin: 'org.jlleitschuh.gradle.ktlint'
-    apply plugin: 'com.btkelly.gnag'
-    apply from: "$rootDir/analysis/gnag.gradle"
+    id 'org.jetbrains.kotlin.jvm' version '1.6.20' apply false
 }
 
 task clean(type: Delete) {
