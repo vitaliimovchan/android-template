@@ -1,3 +1,3 @@
 package com.vitaliimovchan.domain
 
-class MyClass
+sealed interface Error

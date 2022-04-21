@@ -1,1 +1,5 @@
 apply from: "$rootDir/kotlin-library.gradle"
+
+dependencies {
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
+}
