@@ -1,4 +1,4 @@
-package com.vitaliimovchan.domain
+package com.vitaliimovchan.core
 
 @Suppress("MemberVisibilityCanBePrivate")
 class Result<T> private constructor(private val value: Any?) {

@@ -1,4 +1,4 @@
-package com.vitaliimovchan.domain
+package com.vitaliimovchan.core
 
 import kotlinx.coroutines.withContext
 
