@@ -1,4 +1,4 @@
-package com.vitaliimovchan.core
+package com.vitaliimovchan
 
 import kotlinx.coroutines.CoroutineDispatcher
 
